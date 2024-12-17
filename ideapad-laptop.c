@@ -1241,7 +1241,7 @@ static void ideapad_check_special_buttons(struct ideapad_private *priv)
 		case 0:	/* Z580 */
 			/* Thermal Management / Performance Mode button */
 			if (priv->dytc)
-				platform_profile_cycle();
+				platform_profile_notify_change();
 			else
 				ideapad_input_report(priv, 65);
 			break;
